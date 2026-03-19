@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>능력개발사업 종합 안내 | 한국산업인력공단 경기서부지사</title>
+<meta name="description" content="부천·김포·시흥·광명 기업을 위한 능력개발사업 종합 안내. 사업주훈련, 체계적 현장훈련(S-OJT), 일학습병행, 인적자원개발 우수기관 인증, 산업현장교수 지원사업 정보를 확인하세요.">
+<meta name="keywords" content="능력개발사업, 한국산업인력공단, 경기서부지사, 사업주훈련, S-OJT, 일학습병행, HRD, 직업훈련">
+<meta property="og:title" content="능력개발사업 종합 안내 | 한국산업인력공단 경기서부지사">
+<meta property="og:description" content="부천·김포·시흥·광명 기업을 위한 능력개발사업 종합 안내. 무료 훈련 처방 서비스를 받아보세요.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Black+Han+Sans&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: '#0066CC',
+        'primary-dark': '#004A99',
+        'primary-light': '#E8F4FD',
+        accent: '#00896F',
+        'accent-light': '#E6F5F1',
+        navy: '#1B2A4A',
+        slate: '#2D3748',
+        mist: '#F4F6F9',
+        'gray-650': '#4A5568',
+      },
+      fontFamily: {
+        sans: ['Noto Sans KR', 'sans-serif'],
+        display: ['Black Han Sans', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
+<style>
+  * { scroll-behavior: smooth; }
+  body { font-family: 'Noto Sans KR', sans-serif; }
+
+  /* Skip nav */
+  .skip-nav {
+    position: absolute; left: -9999px; top: 0;
+    z-index: 999; padding: 8px 16px;
+    background: #0066CC; color: #fff; font-weight: 600;
+  }
+  .skip-nav:focus { left: 0; }
+
+  /* Hero */
+  .hero-bg {
+    background: linear-gradient(160deg, #004A99 0%, #0066CC 40%, #1B2A4A 100%);
+  }
+
+  /* Fade in */
+  .fade-up { opacity: 0; transform: translateY(32px); transition: all 0.65s cubic-bezier(0.16, 1, 0.3, 1); }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+  /* Card lift */
+  .card-lift { transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1); }
+  .card-lift:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(0,0,0,0.1); }
+
+  /* Nav */
+  .nav-link { position: relative; }
+  .nav-link::after {
+    content: ''; position: absolute; bottom: -4px; left: 50%;
+    width: 0; height: 2.5px; background: #00896F; border-radius: 2px;
+    transition: all 0.3s ease; transform: translateX(-50%);
+  }
+  .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+
+  /* Top btn */
+  #topBtn { opacity: 0; pointer-events: none; transition: all 0.3s ease; }
+  #topBtn.show { opacity: 1; pointer-events: auto; }
+
+  /* Mobile menu */
+  #mobileMenu { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+  #mobileMenu.open { max-height: 600px; }
+
+  /* Table scroll hint */
+  .table-scroll-wrap { position: relative; }
+  .table-scroll-wrap::after {
+    content: ''; position: absolute; top: 0; right: 0; bottom: 0; width: 40px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.9));
+    pointer-events: none; opacity: 0; transition: opacity 0.3s;
+  }
+  .table-scroll-wrap.has-scroll::after { opacity: 1; }
+
+  /* Timeline */
+  .timeline-step { position: relative; padding-left: 2.5rem; padding-bottom: 1.5rem; }
+  .timeline-step::before {
+    content: ''; position: absolute; left: 0.875rem; top: 2rem; bottom: 0;
+    width: 2px; background: #D1D5DB;
+  }
+  .timeline-step:last-child::before { display: none; }
+  .timeline-step:last-child { padding-bottom: 0; }
+  .timeline-dot {
+    position: absolute; left: 0; top: 0.25rem;
+    width: 1.875rem; height: 1.875rem; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.75rem; font-weight: 700; color: #fff; z-index: 1;
+  }
+
+  /* Mobile card for tables */
+  .mobile-card { display: none; }
+  @media (max-width: 767px) {
+    .desktop-table { display: none; }
+    .mobile-card { display: block; }
+  }
+  @media (min-width: 768px) {
+    .desktop-table { display: block; }
+    .mobile-card { display: none; }
+  }
+
+  /* Benefit tag */
+  .benefit-tag {
+    display: inline-block; padding: 3px 10px; border-radius: 16px;
+    font-size: 12px; font-weight: 600; white-space: nowrap;
+  }
+</style>
+</head>
+<body class="bg-white text-slate antialiased">
+
+<!-- Skip Navigation -->
+<a href="#main-content" class="skip-nav">본문 바로가기</a>
+
+<!-- ======================== NAV ======================== -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" role="navigation" aria-label="메인 네비게이션">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="flex items-center justify-between h-16 lg:h-20">
+      <a href="#hero" class="flex items-center gap-3 group" aria-label="한국산업인력공단 경기서부지사 홈">
+        <img id="navLogo" src="https://www.hrdkorea.or.kr/design5/images/logo.svg" alt="한국산업인력공단" class="h-9 group-hover:scale-105 transition-all brightness-0 invert">
+        <div class="hidden sm:block">
+          <div class="text-sm font-bold leading-tight nav-logo-text text-white transition-colors duration-300">경기서부지사</div>
+          <div class="text-[11px] nav-logo-sub text-white/80 transition-colors duration-300">능력개발사업 종합 안내</div>
+        </div>
+      </a>
+      <div class="hidden lg:flex items-center gap-7">
+        <a href="#about" class="nav-link text-sm font-medium text-white/90 hover:text-white transition-colors duration-300">지사소개</a>
+        <a href="#overview" class="nav-link text-sm font-medium text-white/90 hover:text-white transition-colors duration-300">사업 한눈에</a>
+        <a href="#employer" class="nav-link text-sm font-medium text-white/90 hover:text-white transition-colors duration-300">사업주훈련</a>
+        <a href="#sojt" class="nav-link text-sm font-medium text-white/90 hover:text-white transition-colors duration-300">S-OJT</a>
+        <a href="#dual" class="nav-link text-sm font-medium text-white/90 hover:text-white transition-colors duration-300">일학습병행</a>
+        <a href="#cert" class="nav-link text-sm font-medium text-white/90 hover:text-white transition-colors duration-300">우수기관인증</a>
+        <a href="#meister" class="nav-link text-sm font-medium text-white/90 hover:text-white transition-colors duration-300">산업현장교수</a>
+        <a href="#contact" class="nav-cta px-5 py-2.5 bg-white/20 backdrop-blur-sm text-white text-sm font-semibold rounded-full border border-white/30 hover:bg-white/30 transition-all duration-300">문의하기</a>
+      </div>
+      <button id="menuBtn" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg hover:bg-white/10 transition-colors" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobileMenu">
+        <svg class="w-6 h-6 text-white transition-colors duration-300 menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="lg:hidden" role="menu">
+      <div class="pb-4 space-y-1">
+        <a href="#about" class="mobile-link block px-4 py-3 text-sm font-medium text-white rounded-lg hover:bg-white/10" role="menuitem">지사소개</a>
+        <a href="#overview" class="mobile-link block px-4 py-3 text-sm font-medium text-white rounded-lg hover:bg-white/10" role="menuitem">사업 한눈에</a>
+        <a href="#employer" class="mobile-link block px-4 py-3 text-sm font-medium text-white rounded-lg hover:bg-white/10" role="menuitem">사업주훈련</a>
+        <a href="#sojt" class="mobile-link block px-4 py-3 text-sm font-medium text-white rounded-lg hover:bg-white/10" role="menuitem">S-OJT</a>
+        <a href="#dual" class="mobile-link block px-4 py-3 text-sm font-medium text-white rounded-lg hover:bg-white/10" role="menuitem">일학습병행</a>
+        <a href="#cert" class="mobile-link block px-4 py-3 text-sm font-medium text-white rounded-lg hover:bg-white/10" role="menuitem">우수기관인증</a>
+        <a href="#meister" class="mobile-link block px-4 py-3 text-sm font-medium text-white rounded-lg hover:bg-white/10" role="menuitem">산업현장교수</a>
+        <a href="#contact" class="block px-4 py-3 text-sm font-semibold text-white bg-primary rounded-lg text-center" role="menuitem">문의하기</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ======================== HERO ======================== -->
+<section id="hero" class="hero-bg relative min-h-screen flex items-center overflow-hidden">
+  <div class="absolute inset-0 opacity-[0.04]" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;1&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-32 lg:py-40 relative z-10">
+    <div class="max-w-3xl">
+      <div class="inline-flex items-center gap-3 px-5 py-2.5 bg-white/10 backdrop-blur-sm rounded-full mb-8 border border-white/20">
+        <img src="https://www.hrdkorea.or.kr/design5/images/logo.svg" alt="" class="h-6 brightness-0 invert opacity-90" aria-hidden="true">
+        <span class="text-white text-sm font-medium">경기서부지사</span>
+      </div>
+      <h1 class="font-display text-4xl sm:text-5xl lg:text-7xl text-white leading-tight mb-6">
+        기업과 근로자의<br>
+        <span class="text-[#5CD9B5]">경쟁력</span>을 높이는<br>
+        능력개발사업
+      </h1>
+      <p class="text-lg sm:text-xl text-white/85 leading-relaxed mb-10 max-w-xl">
+        그동안 직원 교육 망설이셨나요?<br>
+        경기서부지사 능력개발전담주치의가 기업을 진단하고,<br class="hidden sm:block">
+        기업의 교육여건을 고려하여 <strong class="text-white">적합한 훈련을 무료로 처방</strong>해드립니다.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="#flowchart" class="px-8 py-4 bg-accent text-white font-bold rounded-full hover:bg-[#006F5B] transition-all shadow-xl hover:-translate-y-1">
+          우리 기업에 맞는 사업 찾기 →
+        </a>
+        <a href="#contact" class="px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-full border border-white/30 hover:bg-white/20 transition-all">
+          상담 문의하기
+        </a>
+      </div>
+      <div class="mt-12 flex flex-wrap gap-3" aria-label="관할 지역">
+        <span class="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-lg text-white text-sm font-medium border border-white/10">부천시</span>
+        <span class="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-lg text-white text-sm font-medium border border-white/10">김포시</span>
+        <span class="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-lg text-white text-sm font-medium border border-white/10">시흥시</span>
+        <span class="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-lg text-white text-sm font-medium border border-white/10">광명시</span>
+      </div>
+    </div>
+  </div>
+  <div class="absolute bottom-0 left-0 right-0">
+    <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0 100L60 87.5C120 75 240 50 360 43.75C480 37.5 600 50 720 56.25C840 62.5 960 62.5 1080 56.25C1200 50 1320 37.5 1380 31.25L1440 25V100H0Z" fill="white"/></svg>
+  </div>
+</section>
+
+<!-- ======================== MAIN ======================== -->
+<main id="main-content">
+
+<!-- ======================== ABOUT ======================== -->
+<section id="about" class="py-20 lg:py-28 bg-white" aria-labelledby="about-title">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="fade-up text-center mb-16">
+      <span class="inline-block px-4 py-1.5 bg-primary-light text-primary text-sm font-semibold rounded-full mb-4">지사 소개</span>
+      <h2 id="about-title" class="font-display text-3xl sm:text-4xl lg:text-5xl text-navy mb-4">경기서부지사 <span class="text-primary">관할구역</span></h2>
+      <p class="text-gray-650 text-lg max-w-2xl mx-auto">중요하고 소중한 기업의 동반자, 한국산업인력공단 경기서부지사입니다</p>
+    </div>
+
+    <div class="fade-up grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="card-lift bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-11 h-11 rounded-xl bg-primary text-white flex items-center justify-center text-lg font-bold">김</div>
+          <h3 class="text-lg font-bold text-navy">김포시</h3>
+        </div>
+        <dl class="space-y-1.5 text-sm text-gray-650">
+          <div><dt class="inline font-semibold text-navy">인구:</dt> <dd class="inline">511,092명</dd></div>
+          <div><dt class="inline font-semibold text-navy">사업장:</dt> <dd class="inline">62,310개</dd></div>
+          <div><dt class="inline font-semibold text-navy">주요 산업단지:</dt> <dd class="inline">학운, 양촌, 대포, 김포항공, 올생, 상마, 통진, 한강시네폴리스</dd></div>
+          <div><dt class="inline font-semibold text-navy">교육기관:</dt> <dd class="inline">특성화고 3, 전문대 1, 대학 1</dd></div>
+        </dl>
+      </div>
+      <div class="card-lift bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-11 h-11 rounded-xl bg-primary text-white flex items-center justify-center text-lg font-bold">부</div>
+          <h3 class="text-lg font-bold text-navy">부천시</h3>
+        </div>
+        <dl class="space-y-1.5 text-sm text-gray-650">
+          <div><dt class="inline font-semibold text-navy">인구:</dt> <dd class="inline">795,553명</dd></div>
+          <div><dt class="inline font-semibold text-navy">사업장:</dt> <dd class="inline">87,889개</dd></div>
+          <div><dt class="inline font-semibold text-navy">주요 산업단지:</dt> <dd class="inline">오정·테크노파크, 부천, 춘의, 대우</dd></div>
+          <div><dt class="inline font-semibold text-navy">교육기관:</dt> <dd class="inline">특성화고 4, 전문대 2, 대학 2</dd></div>
+        </dl>
+      </div>
+      <div class="card-lift bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-11 h-11 rounded-xl bg-primary text-white flex items-center justify-center text-lg font-bold">시</div>
+          <h3 class="text-lg font-bold text-navy">시흥시</h3>
+        </div>
+        <dl class="space-y-1.5 text-sm text-gray-650">
+          <div><dt class="inline font-semibold text-navy">인구:</dt> <dd class="inline">557,614명</dd></div>
+          <div><dt class="inline font-semibold text-navy">사업장:</dt> <dd class="inline">69,637개</dd></div>
+          <div><dt class="inline font-semibold text-navy">주요 산업단지:</dt> <dd class="inline">시화, 시화MTV, 반월특수지역, 광명시흥, 매화</dd></div>
+          <div><dt class="inline font-semibold text-navy">교육기관:</dt> <dd class="inline">특성화고 4, 전문대 1, 대학 1</dd></div>
+        </dl>
+      </div>
+      <div class="card-lift bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-11 h-11 rounded-xl bg-primary text-white flex items-center justify-center text-lg font-bold">광</div>
+          <h3 class="text-lg font-bold text-navy">광명시</h3>
+        </div>
+        <dl class="space-y-1.5 text-sm text-gray-650">
+          <div><dt class="inline font-semibold text-navy">인구:</dt> <dd class="inline">286,351명</dd></div>
+          <div><dt class="inline font-semibold text-navy">사업장:</dt> <dd class="inline">26,653개</dd></div>
+          <div><dt class="inline font-semibold text-navy">주요 산업단지:</dt> <dd class="inline">광명시흥</dd></div>
+          <div><dt class="inline font-semibold text-navy">교육기관:</dt> <dd class="inline">특성화고 2, 기능대학(폴리텍) 1</dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="fade-up mt-10 grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="text-center p-5 bg-primary-light rounded-2xl"><div class="text-3xl lg:text-4xl font-bold text-primary">4개</div><div class="text-sm text-gray-650 font-medium mt-1">관할 시·군</div></div>
+      <div class="text-center p-5 bg-primary-light rounded-2xl"><div class="text-3xl lg:text-4xl font-bold text-primary">215만+</div><div class="text-sm text-gray-650 font-medium mt-1">관할 인구</div></div>
+      <div class="text-center p-5 bg-primary-light rounded-2xl"><div class="text-3xl lg:text-4xl font-bold text-primary">24만+</div><div class="text-sm text-gray-650 font-medium mt-1">관할 사업장</div></div>
+      <div class="text-center p-5 bg-primary-light rounded-2xl"><div class="text-3xl lg:text-4xl font-bold text-primary">무료</div><div class="text-sm text-gray-650 font-medium mt-1">훈련 처방 서비스</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== OVERVIEW ======================== -->
+<section id="overview" class="py-20 lg:py-28 bg-mist" aria-labelledby="overview-title">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="fade-up text-center mb-16">
+      <span class="inline-block px-4 py-1.5 bg-accent-light text-accent text-sm font-semibold rounded-full mb-4">사업 총람</span>
+      <h2 id="overview-title" class="font-display text-3xl sm:text-4xl lg:text-5xl text-navy mb-4">능력개발사업 <span class="text-primary">한눈에 보기</span></h2>
+      <p class="text-gray-650 text-lg max-w-2xl mx-auto">기업의 성장 단계별로 맞춤형 지원을 받으실 수 있습니다</p>
+    </div>
+    <div class="fade-up grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <a href="#employer" class="card-lift bg-white rounded-2xl p-7 border border-gray-200 group">
+        <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-all">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+        </div>
+        <h3 class="text-lg font-bold text-navy mb-2 group-hover:text-primary transition-colors">사업주 직업능력개발훈련</h3>
+        <p class="text-sm text-gray-650 leading-relaxed">사업주가 소속 근로자 등의 직무능력향상을 위하여 직업훈련을 실시한 경우 비용의 일부를 지원</p>
+        <span class="mt-4 inline-block text-xs text-primary font-semibold">자세히 보기 →</span>
+      </a>
+      <a href="#sojt" class="card-lift bg-white rounded-2xl p-7 border border-gray-200 group">
+        <div class="w-12 h-12 rounded-xl bg-accent/10 text-accent flex items-center justify-center mb-4 group-hover:bg-accent group-hover:text-white transition-all">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+        </div>
+        <h3 class="text-lg font-bold text-navy mb-2 group-hover:text-accent transition-colors">체계적 현장훈련 (S-OJT)</h3>
+        <p class="text-sm text-gray-650 leading-relaxed">우선지원대상기업의 현장맞춤형 훈련프로그램 제작, 훈련 노하우, 훈련비용을 제공하여 재직자 숙련기술 양성 지원</p>
+        <span class="mt-4 inline-block text-xs text-accent font-semibold">자세히 보기 →</span>
+      </a>
+      <a href="#dual" class="card-lift bg-white rounded-2xl p-7 border border-gray-200 group">
+        <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-all">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        </div>
+        <h3 class="text-lg font-bold text-navy mb-2 group-hover:text-primary transition-colors">일학습병행</h3>
+        <p class="text-sm text-gray-650 leading-relaxed">기업이 청년 등을 채용한 후 체계적 교육 훈련 프로그램을 기반으로 훈련을 실시하고 평가를 통해 자격을 주는 제도</p>
+        <span class="mt-4 inline-block text-xs text-primary font-semibold">자세히 보기 →</span>
+      </a>
+      <a href="#cert" class="card-lift bg-white rounded-2xl p-7 border border-gray-200 group">
+        <div class="w-12 h-12 rounded-xl bg-accent/10 text-accent flex items-center justify-center mb-4 group-hover:bg-accent group-hover:text-white transition-all">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+        </div>
+        <h3 class="text-lg font-bold text-navy mb-2 group-hover:text-accent transition-colors">인적자원개발 우수기관 인증</h3>
+        <p class="text-sm text-gray-650 leading-relaxed">정부 4개 부처 공동명의로 HRD 우수기관을 인증하여 인적자원개발 투자를 촉진</p>
+        <span class="mt-4 inline-block text-xs text-accent font-semibold">자세히 보기 →</span>
+      </a>
+      <a href="#meister" class="card-lift bg-white rounded-2xl p-7 border border-gray-200 group">
+        <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-all">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+        </div>
+        <h3 class="text-lg font-bold text-navy mb-2 group-hover:text-primary transition-colors">대한민국산업현장교수</h3>
+        <p class="text-sm text-gray-650 leading-relaxed">15년 이상 경험을 보유한 전문가가 우선지원기업 대상으로 숙련기술, HRD 종합 서비스를 무료 지원</p>
+        <span class="mt-4 inline-block text-xs text-primary font-semibold">자세히 보기 →</span>
+      </a>
+      <div class="card-lift bg-navy rounded-2xl p-7 border border-navy text-white">
+        <div class="w-12 h-12 rounded-xl bg-white/10 text-white flex items-center justify-center mb-4">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        </div>
+        <h3 class="text-lg font-bold mb-2">HRD4U 통합 플랫폼</h3>
+        <p class="text-sm text-white/80 leading-relaxed">기업의 HRD 수준을 체계적으로 분석하고 다양한 정보 및 행정서비스를 제공하는 직업능력개발 통합플랫폼</p>
+        <a href="https://hrd4u.or.kr" target="_blank" rel="noopener" class="inline-block mt-4 text-xs text-[#5CD9B5] font-semibold hover:text-white transition-colors">hrd4u.or.kr →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== FLOWCHART ======================== -->
+<section id="flowchart" class="py-20 lg:py-28 bg-white" aria-labelledby="flow-title">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6">
+    <div class="fade-up text-center mb-16">
+      <span class="inline-block px-4 py-1.5 bg-accent-light text-accent text-sm font-semibold rounded-full mb-4">맞춤 진단</span>
+      <h2 id="flow-title" class="font-display text-3xl sm:text-4xl lg:text-5xl text-navy mb-4">우리 기업에 맞는 <span class="text-primary">사업 찾기</span></h2>
+      <p class="text-gray-650 text-lg">능력개발전담주치의가 도와드립니다!</p>
+    </div>
+    <div class="fade-up space-y-6">
+      <!-- Q1 -->
+      <div class="bg-primary rounded-2xl p-5 text-white text-center font-bold text-base sm:text-lg">기업 스스로 교육 과정을 설계하고 운영할 수 있나요?</div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <a href="#employer" class="group block bg-accent-light border-2 border-accent/30 rounded-2xl p-5 hover:border-accent hover:shadow-lg hover:-translate-y-1 transition-all cursor-pointer">
+          <div class="text-accent font-bold text-sm mb-2">YES</div>
+          <div class="flex items-center justify-between">
+            <span class="text-base font-bold text-navy group-hover:text-accent transition-colors">사업주 훈련 (자체)</span>
+            <span class="w-8 h-8 rounded-full bg-accent/10 group-hover:bg-accent flex items-center justify-center transition-all flex-shrink-0 ml-3">
+              <svg class="w-4 h-4 text-accent group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+        <div class="bg-primary-light border-2 border-primary/20 rounded-2xl p-5">
+          <div class="text-primary font-bold text-sm mb-3">NO — 어떤 방식의 지원이 필요한가요?</div>
+          <div class="space-y-2">
+            <a href="#sojt" class="group flex items-center justify-between p-3 bg-white rounded-xl border border-gray-200 hover:border-accent hover:shadow-md transition-all">
+              <div>
+                <div class="text-xs text-gray-500 mb-0.5">기업 자체 교육체계 구축</div>
+                <div class="text-sm font-bold text-navy group-hover:text-accent transition-colors">체계적 현장훈련 (S-OJT)</div>
+              </div>
+              <span class="w-7 h-7 rounded-full bg-accent/10 group-hover:bg-accent flex items-center justify-center transition-all flex-shrink-0 ml-2">
+                <svg class="w-3.5 h-3.5 text-accent group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+              </span>
+            </a>
+            <a href="#meister" class="group flex items-center justify-between p-3 bg-white rounded-xl border border-gray-200 hover:border-primary hover:shadow-md transition-all">
+              <div>
+                <div class="text-xs text-gray-500 mb-0.5">현장 노하우 전수</div>
+                <div class="text-sm font-bold text-navy group-hover:text-primary transition-colors">산업현장교수 지원사업</div>
+              </div>
+              <span class="w-7 h-7 rounded-full bg-primary/10 group-hover:bg-primary flex items-center justify-center transition-all flex-shrink-0 ml-2">
+                <svg class="w-3.5 h-3.5 text-primary group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Q2 -->
+      <div class="bg-accent rounded-2xl p-5 text-white text-center font-bold text-base sm:text-lg">필요한 교육을 선택하여 듣고 싶은가요?</div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <a href="#employer" class="group block bg-accent-light border-2 border-accent/30 rounded-2xl p-5 hover:border-accent hover:shadow-lg hover:-translate-y-1 transition-all cursor-pointer">
+          <div class="font-bold text-accent text-sm mb-1">복잡한 절차 NO! 단기 특강</div>
+          <div class="flex items-center justify-between mt-2">
+            <span class="text-base font-bold text-navy group-hover:text-accent transition-colors">기업가치플러스훈련</span>
+            <span class="w-8 h-8 rounded-full bg-accent/10 group-hover:bg-accent flex items-center justify-center transition-all flex-shrink-0 ml-3">
+              <svg class="w-4 h-4 text-accent group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+        <a href="#employer" class="group block bg-primary-light border-2 border-primary/20 rounded-2xl p-5 hover:border-primary hover:shadow-lg hover:-translate-y-1 transition-all cursor-pointer">
+          <div class="font-bold text-primary text-sm mb-1">직무역량 향상 완성형 교육</div>
+          <div class="flex items-center justify-between mt-2">
+            <span class="text-base font-bold text-navy group-hover:text-primary transition-colors">사업주 훈련 (위탁)</span>
+            <span class="w-8 h-8 rounded-full bg-primary/10 group-hover:bg-primary flex items-center justify-center transition-all flex-shrink-0 ml-3">
+              <svg class="w-4 h-4 text-primary group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+      </div>
+      <!-- Q3 -->
+      <div class="bg-navy rounded-2xl p-5 text-white text-center font-bold text-base sm:text-lg">상시 근로자수가 50인 이상인가요?</div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <a href="#dual" class="group block bg-accent-light border-2 border-accent/30 rounded-2xl p-5 hover:border-accent hover:shadow-lg hover:-translate-y-1 transition-all cursor-pointer">
+          <div class="text-accent font-bold text-sm mb-1">YES (50인 이상)</div>
+          <div class="flex items-center justify-between mt-2">
+            <span class="text-base font-bold text-navy group-hover:text-accent transition-colors">일학습병행 단독기업형</span>
+            <span class="w-8 h-8 rounded-full bg-accent/10 group-hover:bg-accent flex items-center justify-center transition-all flex-shrink-0 ml-3">
+              <svg class="w-4 h-4 text-accent group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+        <a href="#dual" class="group block bg-primary-light border-2 border-primary/20 rounded-2xl p-5 hover:border-primary hover:shadow-lg hover:-translate-y-1 transition-all cursor-pointer">
+          <div class="text-primary font-bold text-sm mb-1">NO (20인 이상)</div>
+          <div class="flex items-center justify-between mt-2">
+            <span class="text-base font-bold text-navy group-hover:text-primary transition-colors">일학습병행 공동훈련센터형</span>
+            <span class="w-8 h-8 rounded-full bg-primary/10 group-hover:bg-primary flex items-center justify-center transition-all flex-shrink-0 ml-3">
+              <svg class="w-4 h-4 text-primary group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+      </div>
+      <!-- Q4 -->
+      <a href="#cert" class="group block bg-gradient-to-r from-primary to-accent rounded-2xl p-5 text-white hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer">
+        <div class="text-sm font-medium mb-1 text-white/90">우리 회사는 인적자원개발(HRD)에 진심이다!</div>
+        <div class="flex items-center justify-between">
+          <span class="text-lg font-bold">인적자원개발 우수기관 인증</span>
+          <span class="w-9 h-9 rounded-full bg-white/20 group-hover:bg-white/30 flex items-center justify-center transition-all flex-shrink-0 ml-3">
+            <svg class="w-4.5 h-4.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== EMPLOYER TRAINING ======================== -->
+<section id="employer" class="py-20 lg:py-28 bg-mist" aria-labelledby="employer-title">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="fade-up text-center mb-16">
+      <span class="inline-block px-4 py-1.5 bg-primary-light text-primary text-sm font-semibold rounded-full mb-4">01</span>
+      <h2 id="employer-title" class="font-display text-3xl sm:text-4xl lg:text-5xl text-navy mb-4">사업주 <span class="text-primary">직업능력개발훈련</span></h2>
+      <p class="text-gray-650 text-lg max-w-2xl mx-auto">사업주가 소속 근로자 등을 대상으로 실시한 훈련 비용의 일부를 지원함으로써 기업의 직업능력개발훈련 실시를 촉진하는 대표사업</p>
+    </div>
+    <div class="fade-up grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <!-- 자체 -->
+      <div class="bg-white rounded-2xl p-7 border border-gray-200 shadow-sm">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-11 h-11 rounded-xl bg-primary text-white flex items-center justify-center font-bold">자체</div>
+          <h3 class="text-xl font-bold text-navy">사업주훈련 (자체)</h3>
+        </div>
+        <h4 class="text-sm font-semibold text-primary mb-3">참여 조건</h4>
+        <div class="grid grid-cols-2 gap-3 mb-6">
+          <div class="bg-primary-light rounded-xl p-3 text-center"><div class="text-xl font-bold text-primary">4시간+</div><div class="text-xs text-gray-650 mt-0.5">훈련시간</div></div>
+          <div class="bg-primary-light rounded-xl p-3 text-center"><div class="text-xl font-bold text-primary">1.5㎡</div><div class="text-xs text-gray-650 mt-0.5">1인당 훈련장소</div></div>
+          <div class="bg-primary-light rounded-xl p-3 text-center"><div class="text-base font-bold text-primary">직무연관</div><div class="text-xs text-gray-650 mt-0.5">훈련내용</div></div>
+          <div class="bg-primary-light rounded-xl p-3 text-center"><div class="text-base font-bold text-primary">경력1년+</div><div class="text-xs text-gray-650 mt-0.5">훈련강사</div></div>
+        </div>
+        <h4 class="text-sm font-semibold text-primary mb-3">지원 비용</h4>
+        <div class="space-y-2 text-sm text-gray-650">
+          <p><strong class="text-navy">훈련비:</strong> NCS직종별 단가 × 훈련시간 × 훈련인원 <span class="text-xs text-gray-500">(대기업 별도)</span></p>
+          <p><strong class="text-navy">식비:</strong> 1일 3,300원 / <strong class="text-navy">숙식비:</strong> 1일 14,000원 <span class="text-xs text-gray-500">(1일 5시간 이상 훈련시)</span></p>
+        </div>
+        <h4 class="text-sm font-semibold text-primary mt-6 mb-3">참여 절차</h4>
+        <div class="space-y-0" role="list" aria-label="사업주훈련 자체 참여절차">
+          <div class="timeline-step" role="listitem"><div class="timeline-dot bg-primary">1</div><div><strong class="text-navy text-sm">회원가입</strong><p class="text-xs text-gray-500">HRD-NET 훈련기관 회원가입, 행정지원 시스템 설치</p></div></div>
+          <div class="timeline-step" role="listitem"><div class="timeline-dot bg-primary">2</div><div><strong class="text-navy text-sm">과정인정 신청</strong><p class="text-xs text-gray-500">훈련기관정보, 커리큘럼, 강사, 강의실 등</p></div></div>
+          <div class="timeline-step" role="listitem"><div class="timeline-dot bg-primary">3</div><div><strong class="text-navy text-sm">실시신고</strong><p class="text-xs text-gray-500">인정받은 과정의 훈련생 등록</p></div></div>
+          <div class="timeline-step" role="listitem"><div class="timeline-dot bg-accent">4</div><div><strong class="text-navy text-sm">훈련실시</strong><p class="text-xs text-gray-500">인정받은 과정에 대한 훈련실시</p></div></div>
+          <div class="timeline-step" role="listitem"><div class="timeline-dot bg-accent">5</div><div><strong class="text-navy text-sm">수료보고</strong><p class="text-xs text-gray-500">훈련생 수료 여부 확인 및 등록</p></div></div>
+          <div class="timeline-step" role="listitem"><div class="timeline-dot bg-accent">6</div><div><strong class="text-navy text-sm">비용신청</strong><p class="text-xs text-gray-500">훈련비 및 숙식비 등 비용신청</p></div></div>
+        </div>
+      </div>
+      <!-- 위탁 -->
+      <div class="bg-white rounded-2xl p-7 border border-gray-200 shadow-sm">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-11 h-11 rounded-xl bg-accent text-white flex items-center justify-center font-bold">위탁</div>
+          <h3 class="text-xl font-bold text-navy">사업주훈련 (위탁)</h3>
+        </div>
+        <h4 class="text-sm font-semibold text-accent mb-3">훈련 종류</h4>
+        <div class="space-y-3 mb-6">
+          <div class="bg-accent-light rounded-xl p-4"><strong class="text-navy text-sm">집체훈련</strong><p class="text-sm text-gray-650 mt-0.5">훈련기관에서 제공하는 장소에 모여서 진행</p></div>
+          <div class="bg-accent-light rounded-xl p-4"><strong class="text-navy text-sm">원격훈련</strong><p class="text-sm text-gray-650 mt-0.5">PC, 모바일 등을 활용하여 언제 어디서나 가능</p></div>
+        </div>
+        <h4 class="text-sm font-semibold text-accent mb-3">교육 콘텐츠</h4>
+        <div class="space-y-2 text-sm text-gray-650 mb-6">
+          <p><strong class="text-navy">주제:</strong> 엑셀 실무 등 경영·회계·사무부터 AI 등 신기술 분야까지</p>
+          <p><strong class="text-navy">시간:</strong> 최소 4시간부터 (회차당 25분 이상)</p>
+        </div>
+        <h4 class="text-sm font-semibold text-accent mb-3">기업부담금</h4>
+        <div class="bg-primary-light border border-primary/15 rounded-xl p-4 mb-6">
+          <p class="text-sm text-gray-650"><strong class="text-primary">훈련비의 10% 이상</strong> 발생가능 <span class="text-xs text-gray-500">(훈련 종료 후 최대 90% 비용환급)</span></p>
+        </div>
+        <h4 class="text-sm font-semibold text-accent mb-3">기업가치(플러스)훈련이란?</h4>
+        <div class="bg-mist rounded-xl p-4 mb-6">
+          <p class="text-sm text-gray-650">단독으로 자체훈련 진행이 어려운 기업들이 공통 과정을 개발하고, 함께 훈련을 진행하는 훈련방법</p>
+        </div>
+        <h4 class="text-sm font-semibold text-accent mb-3">원하는 훈련 찾는 법</h4>
+        <div class="space-y-0" role="list" aria-label="훈련 검색 방법">
+          <div class="timeline-step" role="listitem"><div class="timeline-dot bg-primary">1</div><div class="text-sm text-gray-650">고용24 홈페이지 접속 → 상단 <strong class="text-navy">[기업]</strong> 탭</div></div>
+          <div class="timeline-step" role="listitem"><div class="timeline-dot bg-primary">2</div><div class="text-sm text-gray-650">상단 바 <strong class="text-navy">[직업 능력 개발]</strong> 선택</div></div>
+          <div class="timeline-step" role="listitem"><div class="timeline-dot bg-primary">3</div><div class="text-sm text-gray-650"><strong class="text-navy">[근로자 직업훈련]</strong> 클릭</div></div>
+          <div class="timeline-step" role="listitem"><div class="timeline-dot bg-accent">4</div><div class="text-sm text-gray-650">좌측메뉴 <strong class="text-navy">[사업주훈련]</strong> 클릭</div></div>
+          <div class="timeline-step" role="listitem"><div class="timeline-dot bg-accent">5</div><div class="text-sm text-gray-650">검색창에서 원하는 훈련내용 검색</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== S-OJT ======================== -->
+<section id="sojt" class="py-20 lg:py-28 bg-white" aria-labelledby="sojt-title">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="fade-up text-center mb-16">
+      <span class="inline-block px-4 py-1.5 bg-accent-light text-accent text-sm font-semibold rounded-full mb-4">02</span>
+      <h2 id="sojt-title" class="font-display text-3xl sm:text-4xl lg:text-5xl text-navy mb-4">체계적 현장훈련 <span class="text-accent">(S-OJT)</span></h2>
+      <p class="text-gray-650 text-lg max-w-2xl mx-auto">참여기업의 주요 직무 분석, 훈련 요구조사를 통해 기업노하우의 체계적인 전수 및 현장 문제 해결을 목적으로 하는 훈련</p>
+    </div>
+    <div class="fade-up mb-8">
+      <div class="bg-accent-light rounded-2xl p-6 border border-accent/15 inline-block">
+        <h3 class="text-base font-bold text-navy mb-1">참여대상</h3>
+        <p class="text-sm text-gray-650">고용보험법 시행령 제12조에 해당하는 <strong class="text-accent">「우선지원대상기업」</strong></p>
+      </div>
+    </div>
+
+    <!-- Desktop table -->
+    <div class="fade-up desktop-table">
+      <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+        <table class="w-full text-sm" aria-label="S-OJT 지원내용">
+          <thead>
+            <tr class="bg-accent text-white">
+              <th scope="col" class="px-5 py-3.5 text-left font-semibold">구분</th>
+              <th scope="col" class="px-5 py-3.5 text-left font-semibold">표준개발 (능력개발전담주치의)</th>
+              <th scope="col" class="px-5 py-3.5 text-left font-semibold">맞춤개발 (외부전문가)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-gray-100 hover:bg-gray-50"><th scope="row" class="px-5 py-3 font-semibold text-navy bg-accent/5 text-left">과정개발비</th><td class="px-5 py-3 text-gray-650">내부전문가: 50만원(필수)</td><td class="px-5 py-3 text-gray-650">외부전문가(PM): 100만원(필수)<br>외부전문가(HRD,직무): 60만원(선택)<br>내부전문가: 50만원(필수)</td></tr>
+            <tr class="border-b border-gray-100 hover:bg-gray-50"><th scope="row" class="px-5 py-3 font-semibold text-navy bg-accent/5 text-left">사내강사 수당</th><td colspan="2" class="px-5 py-3 text-gray-650">시간당 5만원 (훈련과정 당 최대 100만원)</td></tr>
+            <tr class="border-b border-gray-100 hover:bg-gray-50"><th scope="row" class="px-5 py-3 font-semibold text-navy bg-accent/5 text-left">외부강사 수당</th><td colspan="2" class="px-5 py-3 text-gray-650">시간당 10만원 (훈련과정 당 최대 300만원)</td></tr>
+            <tr class="border-b border-gray-100 hover:bg-gray-50"><th scope="row" class="px-5 py-3 font-semibold text-navy bg-accent/5 text-left">훈련비</th><td colspan="2" class="px-5 py-3 text-gray-650">NCS단가 × 훈련시간 × 훈련인원 × 300%</td></tr>
+            <tr class="hover:bg-gray-50"><th scope="row" class="px-5 py-3 font-semibold text-navy bg-accent/5 text-left">지원한도</th><td colspan="2" class="px-5 py-3 text-gray-650">과정개발비: 기업당 최대 500만원<br>강사수당(내부+외부): 기업당 최대 1,000만원<br>훈련비: 기업당 연간 지원한도액</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- Mobile cards -->
+    <div class="fade-up mobile-card space-y-4">
+      <div class="bg-white rounded-xl p-5 border border-gray-200 shadow-sm">
+        <h4 class="font-bold text-navy text-sm mb-3 pb-2 border-b border-gray-100">과정개발비</h4>
+        <p class="text-sm text-gray-650 mb-2"><strong class="text-accent">표준개발:</strong> 내부전문가 50만원(필수)</p>
+        <p class="text-sm text-gray-650"><strong class="text-accent">맞춤개발:</strong> 외부전문가(PM) 100만원(필수), 외부전문가(HRD,직무) 60만원(선택), 내부전문가 50만원(필수)</p>
+      </div>
+      <div class="bg-white rounded-xl p-5 border border-gray-200 shadow-sm">
+        <h4 class="font-bold text-navy text-sm mb-2 pb-2 border-b border-gray-100">강사 수당</h4>
+        <p class="text-sm text-gray-650 mb-1"><strong>사내강사:</strong> 시간당 5만원 (과정당 최대 100만원)</p>
+        <p class="text-sm text-gray-650"><strong>외부강사:</strong> 시간당 10만원 (과정당 최대 300만원)</p>
+      </div>
+      <div class="bg-white rounded-xl p-5 border border-gray-200 shadow-sm">
+        <h4 class="font-bold text-navy text-sm mb-2 pb-2 border-b border-gray-100">훈련비</h4>
+        <p class="text-sm text-gray-650">NCS단가 × 훈련시간 × 훈련인원 × 300%</p>
+      </div>
+      <div class="bg-white rounded-xl p-5 border border-gray-200 shadow-sm">
+        <h4 class="font-bold text-navy text-sm mb-2 pb-2 border-b border-gray-100">지원한도</h4>
+        <p class="text-sm text-gray-650">과정개발비: 기업당 최대 500만원 / 강사수당: 기업당 최대 1,000만원 / 훈련비: 기업당 연간 지원한도액</p>
+      </div>
+    </div>
+
+    <!-- 진행절차 -->
+    <div class="fade-up mt-10 bg-accent-light rounded-2xl p-7 border border-accent/15">
+      <h3 class="text-base font-bold text-navy mb-5 text-center">진행절차</h3>
+      <div class="flex flex-wrap justify-center items-center gap-2 sm:gap-3 text-sm">
+        <div class="bg-accent text-white px-4 py-2.5 rounded-xl font-semibold text-center text-xs sm:text-sm">기업 신청<br><span class="text-[10px] text-white/80">hrd4u.or.kr</span></div>
+        <span class="text-accent font-bold hidden sm:inline">→</span>
+        <span class="text-accent font-bold sm:hidden">↓</span>
+        <div class="bg-white text-navy px-4 py-2.5 rounded-xl font-medium border border-accent/20 text-xs sm:text-sm">참여기업 선정</div>
+        <span class="text-accent font-bold hidden sm:inline">→</span>
+        <div class="bg-white text-navy px-4 py-2.5 rounded-xl font-medium border border-accent/20 text-xs sm:text-sm">훈련과정 개발</div>
+        <span class="text-accent font-bold hidden sm:inline">→</span>
+        <div class="bg-white text-navy px-4 py-2.5 rounded-xl font-medium border border-accent/20 text-xs sm:text-sm">훈련실시</div>
+        <span class="text-accent font-bold hidden sm:inline">→</span>
+        <div class="bg-accent text-white px-4 py-2.5 rounded-xl font-semibold text-xs sm:text-sm">비용 지급</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== DUAL (일학습병행) ======================== -->
+<section id="dual" class="py-20 lg:py-28 bg-mist" aria-labelledby="dual-title">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="fade-up text-center mb-16">
+      <span class="inline-block px-4 py-1.5 bg-primary-light text-primary text-sm font-semibold rounded-full mb-4">03</span>
+      <h2 id="dual-title" class="font-display text-3xl sm:text-4xl lg:text-5xl text-navy mb-4">일학습병행</h2>
+      <p class="text-gray-650 text-lg max-w-2xl mx-auto">기업이 청년 등을 채용한 후 체계적 교육훈련 프로그램을 기반으로 훈련을 실시하고 평가를 통해 자격을 주는 일터 중심 교육훈련 제도</p>
+    </div>
+
+    <div class="fade-up grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+      <div class="bg-white rounded-2xl p-7 border border-gray-200 shadow-sm">
+        <h3 class="text-base font-bold text-primary mb-3">지원대상</h3>
+        <p class="text-sm text-gray-650">상시근로자수 <strong class="text-navy">50인</strong>(공동훈련센터형은 <strong class="text-navy">20인</strong>) 이상이면서 기술력을 갖추고 CEO의 인력양성 의지가 높은 기업</p>
+      </div>
+      <div class="bg-white rounded-2xl p-7 border border-gray-200 shadow-sm">
+        <h3 class="text-base font-bold text-primary mb-3">지원내용</h3>
+        <p class="text-sm text-gray-650">훈련비, 훈련장려금, 기업전담인력(기업현장교사, HRD 담당자) 수당 등 훈련실시 기업에 대한 <strong class="text-navy">행·재정적 지원</strong></p>
+      </div>
+    </div>
+
+    <!-- Desktop table -->
+    <div class="fade-up desktop-table">
+      <div class="table-scroll-wrap bg-white rounded-2xl border border-gray-200 overflow-x-auto shadow-sm">
+        <table class="w-full text-sm min-w-[640px]" aria-label="일학습병행 유형">
+          <thead>
+            <tr class="bg-primary text-white">
+              <th scope="col" class="px-5 py-3.5 text-left font-semibold w-20">구분</th>
+              <th scope="col" class="px-5 py-3.5 text-left font-semibold w-48">명칭</th>
+              <th scope="col" class="px-5 py-3.5 text-left font-semibold">주요내용</th>
+            </tr>
+          </thead>
+          <tbody class="text-gray-650">
+            <tr class="border-b border-gray-100 hover:bg-gray-50"><th scope="row" class="px-5 py-3 font-semibold text-navy bg-primary/5 text-left align-top" rowspan="2">재직자</th><td class="px-5 py-3 font-medium text-navy">단독기업형 (50인 이상)</td><td class="px-5 py-3">OJT와 Off-JT을 개별기업에서 독립적으로 수행</td></tr>
+            <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-5 py-3 font-medium text-navy">공동훈련센터형 (20인 이상)</td><td class="px-5 py-3">OJT는 학습기업, Off-JT는 공동훈련센터가 수행</td></tr>
+            <tr class="border-b border-gray-100 hover:bg-gray-50"><th scope="row" class="px-5 py-3 font-semibold text-navy bg-primary/5 text-left align-top" rowspan="5">재학생</th><td class="px-5 py-3 font-medium text-navy">고교단계 (도제학교)</td><td class="px-5 py-3">특성화고 학생이 학교와 기업을 오가며 NCS기반 교육훈련</td></tr>
+            <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-5 py-3 font-medium text-navy">전문대 재학형</td><td class="px-5 py-3">맞춤형 실용 기술인재 양성, NCS 학사체계 기반 훈련</td></tr>
+            <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-5 py-3 font-medium text-navy">4년제大 재학형</td><td class="px-5 py-3">최종학년 학생이 전공분야 기업에 채용되어 OJT 병행</td></tr>
+            <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-5 py-3 font-medium text-navy">첨단산업 아카데미</td><td class="px-5 py-3">전문대 및 4년제 최종학년 대상 첨단산업 직종분야 훈련</td></tr>
+            <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-5 py-3 font-medium text-navy">P-TECH</td><td class="px-5 py-3">도제학교 졸업생 등 대상 융합신기술 중심 고숙련훈련·학위취득 지원</td></tr>
+            <tr class="border-b border-gray-100 hover:bg-gray-50"><th scope="row" class="px-5 py-3 font-semibold text-navy bg-primary/5 text-left align-top" rowspan="4">후학습</th><td class="px-5 py-3 font-medium text-navy">경력개발 고도화</td><td class="px-5 py-3">P-TECH 이후 4년제 편입 또는 전문대 전공심화 연계 상위자격 제공</td></tr>
+            <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-5 py-3 font-medium text-navy">대학원 과정</td><td class="px-5 py-3">3년 이상 재직자 대상 대학원 학위과정 연계 고급 훈련</td></tr>
+            <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-5 py-3 font-medium text-navy">구직자 취업연계형</td><td class="px-5 py-3">공동훈련센터 주도로 구직자 모집 후 교육 제공·취업 연계</td></tr>
+            <tr class="hover:bg-gray-50"><td class="px-5 py-3 font-medium text-navy">외국인유학생</td><td class="px-5 py-3">외국인유학생(D-2) 혹은 졸업생(D-10) 대상 숙련기술인력 양성</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- Mobile cards -->
+    <div class="fade-up mobile-card space-y-4">
+      <div class="bg-white rounded-xl p-5 border border-gray-200 shadow-sm"><h4 class="font-bold text-primary text-sm mb-3 pb-2 border-b border-gray-100">재직자</h4><div class="space-y-2 text-sm text-gray-650"><p><strong class="text-navy">단독기업형 (50인+):</strong> OJT와 Off-JT을 개별기업에서 독립 수행</p><p><strong class="text-navy">공동훈련센터형 (20인+):</strong> OJT는 학습기업, Off-JT는 공동훈련센터 수행</p></div></div>
+      <div class="bg-white rounded-xl p-5 border border-gray-200 shadow-sm"><h4 class="font-bold text-primary text-sm mb-3 pb-2 border-b border-gray-100">재학생</h4><div class="space-y-2 text-sm text-gray-650"><p><strong class="text-navy">고교단계 도제학교:</strong> 특성화고 학생 학교+기업 NCS기반 훈련</p><p><strong class="text-navy">전문대 재학형:</strong> NCS 학사체계 기반 맞춤형 훈련</p><p><strong class="text-navy">4년제 재학형:</strong> 최종학년 채용 후 OJT 병행</p><p><strong class="text-navy">첨단산업 아카데미:</strong> 첨단산업 직종분야 훈련</p><p><strong class="text-navy">P-TECH:</strong> 융합신기술 중심 고숙련훈련·학위취득</p></div></div>
+      <div class="bg-white rounded-xl p-5 border border-gray-200 shadow-sm"><h4 class="font-bold text-primary text-sm mb-3 pb-2 border-b border-gray-100">후학습</h4><div class="space-y-2 text-sm text-gray-650"><p><strong class="text-navy">경력개발 고도화:</strong> 상위자격 성장경로 제공</p><p><strong class="text-navy">대학원 과정:</strong> 3년+ 재직자 대학원 학위 연계 훈련</p><p><strong class="text-navy">구직자 취업연계형:</strong> 구직자 모집→교육→취업 연계</p><p><strong class="text-navy">외국인유학생:</strong> D-2/D-10 대상 숙련기술인력 양성</p></div></div>
+    </div>
+
+    <!-- 진행절차: 가로 카드 그리드 -->
+    <div class="fade-up mt-10 bg-white rounded-2xl p-7 border border-gray-200 shadow-sm">
+      <h3 class="text-base font-bold text-navy mb-6 text-center">진행절차</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3" role="list" aria-label="일학습병행 진행절차">
+        <div class="relative bg-primary-light rounded-xl p-4 text-center" role="listitem">
+          <div class="w-8 h-8 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center mx-auto mb-2">1</div>
+          <strong class="text-navy text-sm block">기업 참여신청</strong>
+          <p class="text-[11px] text-gray-500 mt-1">work24.go.kr</p>
+          <svg class="hidden md:block absolute top-1/2 -right-2.5 w-4 h-4 text-primary -translate-y-1/2 z-10" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>
+        </div>
+        <div class="relative bg-primary-light rounded-xl p-4 text-center" role="listitem">
+          <div class="w-8 h-8 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center mx-auto mb-2">2</div>
+          <strong class="text-navy text-sm block">서류 및 현장심사</strong>
+          <svg class="hidden md:block absolute top-1/2 -right-2.5 w-4 h-4 text-primary -translate-y-1/2 z-10" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>
+        </div>
+        <div class="relative bg-primary-light rounded-xl p-4 text-center" role="listitem">
+          <div class="w-8 h-8 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center mx-auto mb-2">3</div>
+          <strong class="text-navy text-sm block">학습기업 선정</strong>
+          <svg class="hidden md:block absolute top-1/2 -right-2.5 w-4 h-4 text-primary -translate-y-1/2 z-10" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>
+        </div>
+        <div class="relative bg-accent-light rounded-xl p-4 text-center" role="listitem">
+          <div class="w-8 h-8 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center mx-auto mb-2">4</div>
+          <strong class="text-navy text-sm block">훈련과정 개발</strong>
+          <p class="text-[11px] text-gray-500 mt-1">인프라 구축</p>
+        </div>
+        <div class="relative bg-accent-light rounded-xl p-4 text-center" role="listitem">
+          <div class="w-8 h-8 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center mx-auto mb-2">5</div>
+          <strong class="text-navy text-sm block">학습근로자 선발</strong>
+          <svg class="hidden md:block absolute top-1/2 -right-2.5 w-4 h-4 text-accent -translate-y-1/2 z-10" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>
+        </div>
+        <div class="relative bg-accent-light rounded-xl p-4 text-center" role="listitem">
+          <div class="w-8 h-8 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center mx-auto mb-2">6</div>
+          <strong class="text-navy text-sm block">OJT + Off-JT</strong>
+          <p class="text-[11px] text-gray-500 mt-1">훈련 실시</p>
+          <svg class="hidden md:block absolute top-1/2 -right-2.5 w-4 h-4 text-accent -translate-y-1/2 z-10" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>
+        </div>
+        <div class="relative bg-primary-light rounded-xl p-4 text-center" role="listitem">
+          <div class="w-8 h-8 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center mx-auto mb-2">7</div>
+          <strong class="text-navy text-sm block">훈련성과 평가</strong>
+          <p class="text-[11px] text-gray-500 mt-1">내부(1차)+외부(2차)</p>
+          <svg class="hidden md:block absolute top-1/2 -right-2.5 w-4 h-4 text-primary -translate-y-1/2 z-10" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>
+        </div>
+        <div class="relative bg-gradient-to-br from-primary to-accent rounded-xl p-4 text-center text-white" role="listitem">
+          <div class="w-8 h-8 rounded-full bg-white/20 text-white text-xs font-bold flex items-center justify-center mx-auto mb-2">8</div>
+          <strong class="text-sm block">자격(학위) 취득</strong>
+          <p class="text-[11px] text-white/80 mt-1">정규직 전환</p>
+        </div>
+      </div>
+      <p class="text-center text-gray-500 text-xs mt-4">※ 학습근로자가 외부평가 합격시 기간의 정함이 없는 근로자로 전환</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== CERT ======================== -->
+<section id="cert" class="py-20 lg:py-28 bg-white" aria-labelledby="cert-title">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="fade-up text-center mb-16">
+      <span class="inline-block px-4 py-1.5 bg-accent-light text-accent text-sm font-semibold rounded-full mb-4">04</span>
+      <h2 id="cert-title" class="font-display text-3xl sm:text-4xl lg:text-5xl text-navy mb-4">인적자원개발 <span class="text-accent">우수기관 인증</span></h2>
+      <p class="text-gray-650 text-lg max-w-2xl mx-auto">정부가 설정한 HRD·HRM 심사기준을 달성한 기업을 HRD 우수기관으로 인증하여 인적자원개발 투자를 촉진하고 국가경쟁력 강화에 기여</p>
+    </div>
+
+    <div class="fade-up grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10">
+      <div class="bg-accent-light rounded-2xl p-7 border border-accent/15">
+        <h3 class="text-base font-bold text-navy mb-3">참여대상</h3>
+        <p class="text-sm text-gray-650"><strong>고용보험 가입 사업장이라면 누구나!</strong></p>
+        <p class="text-sm text-gray-500 mt-1">(신청부문) 대기업 / 중소기업 / 선취업후학습기업 — 총 3개 부문</p>
+      </div>
+      <div class="bg-primary-light rounded-2xl p-7 border border-primary/10">
+        <h3 class="text-base font-bold text-navy mb-3">인증 수여</h3>
+        <p class="text-sm text-gray-650">인적자원개발 우수기관 인증서 수여 <strong class="text-primary">(유효기간 3년)</strong></p>
+        <p class="text-xs text-gray-500 mt-1">고용노동부, 교육부, 산업통상자원부, 중소벤처기업부 4개 부처 공동명의</p>
+      </div>
+      <div class="bg-mist rounded-2xl p-7 border border-gray-200">
+        <h3 class="text-base font-bold text-navy mb-3">진행절차</h3>
+        <div class="text-xs text-gray-650 space-y-1">
+          <p>① 사업공고 (hrd4u.or.kr) → ② 온라인 신청·접수</p>
+          <p>③ 서류심사 → ④ 현장심사</p>
+          <p>⑤ 심사위원회 → ⑥ 인증위원회</p>
+          <p>⑦ 인증수여 → ⑧ 각종 홍보 및 연수</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Benefits - Desktop table -->
+    <div class="fade-up desktop-table">
+      <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+        <div class="p-5 border-b border-gray-200 bg-accent-light"><h3 class="text-lg font-bold text-navy text-center">인증혜택</h3></div>
+        <table class="w-full text-sm" aria-label="인증혜택 상세">
+          <thead><tr class="border-b border-gray-200 bg-gray-50"><th scope="col" class="px-5 py-3 text-left font-semibold text-navy w-36">부처별</th><th scope="col" class="px-5 py-3 text-left font-semibold text-navy">주요내용</th><th scope="col" class="px-5 py-3 text-left font-semibold text-navy w-28">비고</th></tr></thead>
+          <tbody>
+            <tr class="border-b border-gray-100 hover:bg-gray-50"><th scope="row" class="px-5 py-3 font-semibold text-navy align-top text-left" rowspan="5">고용노동부</th><td class="px-5 py-3 text-gray-650">인증기업 3년간 정기근로감독 면제</td><td class="px-5 py-3"><span class="benefit-tag bg-primary-light text-primary">공통</span></td></tr>
+            <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-5 py-3 text-gray-650">직업능력개발 정부포상 유공자 선정 시 대표자 가점(3점)</td><td class="px-5 py-3"><span class="benefit-tag bg-primary-light text-primary">공통</span></td></tr>
+            <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-5 py-3 text-gray-650">부문별 최고득점 기관 고용노동부장관 표창</td><td class="px-5 py-3"><span class="benefit-tag bg-primary-light text-primary">공통</span></td></tr>
+            <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-5 py-3 text-gray-650">고용지원금 제도 신청시 가점 (고용안정장려금 5점, 무급휴업·휴직고용유지지원금 최대 10점)</td><td class="px-5 py-3"><span class="benefit-tag bg-accent-light text-accent">중소기업</span></td></tr>
+            <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-5 py-3 text-gray-650">청년일자리 강소기업 신청시 가점(최대 1점)</td><td class="px-5 py-3"><span class="benefit-tag bg-accent-light text-accent">중소기업</span></td></tr>
+            <tr class="border-b border-gray-100 hover:bg-gray-50"><th scope="row" class="px-5 py-3 font-semibold text-navy text-left">조달청</th><td class="px-5 py-3 text-gray-650">공공입찰 시 가점 부여 (물품구매/일반용역 적격심사 각 1점, 다수공급자계약 2단계 0.5점)</td><td class="px-5 py-3"><span class="benefit-tag bg-primary-light text-primary">공통</span></td></tr>
+            <tr class="border-b border-gray-100 hover:bg-gray-50"><th scope="row" class="px-5 py-3 font-semibold text-navy align-top text-left" rowspan="2">중소벤처기업부</th><td class="px-5 py-3 text-gray-650">중소기업 병역지정업체 추천 시 가점</td><td class="px-5 py-3"><span class="benefit-tag bg-accent-light text-accent">중소기업</span></td></tr>
+            <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-5 py-3 text-gray-650">기술보증기금 일자리창출기업 보증우대 (보증료 0.2%p 감면, 심사 완화)</td><td class="px-5 py-3"><span class="benefit-tag bg-accent-light text-accent">중소기업</span></td></tr>
+            <tr class="border-b border-gray-100 hover:bg-gray-50"><th scope="row" class="px-5 py-3 font-semibold text-navy text-left">문화체육관광부</th><td class="px-5 py-3 text-gray-650">여가친화인증제 참여 심사 가점(최대 5점)</td><td class="px-5 py-3"><span class="benefit-tag bg-primary-light text-primary">공통</span></td></tr>
+            <tr class="hover:bg-gray-50"><th scope="row" class="px-5 py-3 font-semibold text-navy text-left">기타</th><td class="px-5 py-3 text-gray-650">인증기관 사례 홍보 / 우수기관 인증 로고 및 동판 활용</td><td class="px-5 py-3"><span class="benefit-tag bg-primary-light text-primary">공통</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- Mobile cards -->
+    <div class="fade-up mobile-card space-y-4">
+      <div class="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+        <div class="p-4 bg-accent-light border-b border-accent/15"><h4 class="font-bold text-navy text-sm">인증혜택</h4></div>
+        <div class="p-4 space-y-4 text-sm">
+          <div><h5 class="font-semibold text-navy mb-1.5">고용노동부</h5><ul class="space-y-1.5 text-gray-650"><li>• 3년간 정기근로감독 면제 <span class="benefit-tag bg-primary-light text-primary">공통</span></li><li>• 정부포상 유공자 선정 시 가점 3점 <span class="benefit-tag bg-primary-light text-primary">공통</span></li><li>• 부문별 최고득점 기관 장관 표창 <span class="benefit-tag bg-primary-light text-primary">공통</span></li><li>• 고용지원금 신청시 가점 5~10점 <span class="benefit-tag bg-accent-light text-accent">중소기업</span></li><li>• 청년일자리 강소기업 가점 1점 <span class="benefit-tag bg-accent-light text-accent">중소기업</span></li></ul></div>
+          <div class="pt-3 border-t border-gray-100"><h5 class="font-semibold text-navy mb-1.5">조달청</h5><p class="text-gray-650">공공입찰 시 가점 부여 (적격심사 각 1점, 다수공급자계약 0.5점) <span class="benefit-tag bg-primary-light text-primary">공통</span></p></div>
+          <div class="pt-3 border-t border-gray-100"><h5 class="font-semibold text-navy mb-1.5">중소벤처기업부</h5><ul class="space-y-1.5 text-gray-650"><li>• 병역지정업체 추천 시 가점 <span class="benefit-tag bg-accent-light text-accent">중소기업</span></li><li>• 기술보증기금 보증우대 (0.2%p 감면) <span class="benefit-tag bg-accent-light text-accent">중소기업</span></li></ul></div>
+          <div class="pt-3 border-t border-gray-100"><h5 class="font-semibold text-navy mb-1.5">문화체육관광부</h5><p class="text-gray-650">여가친화인증제 참여 심사 가점 최대 5점 <span class="benefit-tag bg-primary-light text-primary">공통</span></p></div>
+          <div class="pt-3 border-t border-gray-100"><h5 class="font-semibold text-navy mb-1.5">기타</h5><p class="text-gray-650">인증기관 사례 홍보 / 인증 로고 및 동판 활용 <span class="benefit-tag bg-primary-light text-primary">공통</span></p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== MEISTER ======================== -->
+<section id="meister" class="py-20 lg:py-28 bg-mist" aria-labelledby="meister-title">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="fade-up text-center mb-16">
+      <span class="inline-block px-4 py-1.5 bg-primary-light text-primary text-sm font-semibold rounded-full mb-4">05</span>
+      <h2 id="meister-title" class="font-display text-3xl sm:text-4xl lg:text-5xl text-navy mb-4">산업현장교수 <span class="text-primary">지원사업</span></h2>
+      <p class="text-gray-650 text-lg max-w-2xl mx-auto">산업현장에서 오랜 경험과 기술을 축적한 우수기술·기능인력을 국가핵심인력으로 활용하여 기업 및 국가의 경쟁력을 높이는 사업</p>
+    </div>
+    <div class="fade-up grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+      <div class="card-lift bg-white rounded-2xl p-7 border border-gray-200 shadow-sm">
+        <h3 class="text-base font-bold text-navy mb-3">산업현장교수란?</h3>
+        <p class="text-sm text-gray-650">산업현장에서 <strong class="text-primary">15년 이상의 경험</strong>과 고도의 기술을 보유한 산업현장 전문가로, 한국산업인력공단에서 선정한 분들입니다.</p>
+      </div>
+      <div class="card-lift bg-white rounded-2xl p-7 border border-gray-200 shadow-sm">
+        <h3 class="text-base font-bold text-navy mb-3">참여대상</h3>
+        <p class="text-sm text-gray-650">우선지원대상기업 중 고용보험료 완납, 상시근로자 <strong class="text-primary">2인 이상 100인 이하</strong></p>
+        <p class="text-xs text-gray-500 mt-1">* 품질관리분야: 5인 이상 100인 이하</p>
+      </div>
+      <div class="card-lift bg-white rounded-2xl p-7 border border-gray-200 shadow-sm">
+        <h3 class="text-base font-bold text-navy mb-3">지원내용</h3>
+        <p class="text-sm text-gray-650">업무 노하우 및 숙련기술 전수</p>
+        <div class="mt-3 p-3 bg-accent-light rounded-xl border border-accent/15">
+          <p class="text-xs text-accent font-semibold">모든 비용은 국가에서 부담!</p>
+          <p class="text-xs text-gray-500 mt-0.5">지원 시간과 시기는 산업현장교수와 협의하여 결정</p>
+        </div>
+      </div>
+    </div>
+    <div class="fade-up bg-white rounded-2xl p-7 border border-gray-200 shadow-sm mb-10">
+      <h3 class="text-base font-bold text-navy mb-4">지원분야 : 총 14개 분야</h3>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1.5 bg-primary-light text-primary text-sm rounded-full font-medium">기계</span>
+        <span class="px-3 py-1.5 bg-primary-light text-primary text-sm rounded-full font-medium">재료</span>
+        <span class="px-3 py-1.5 bg-primary-light text-primary text-sm rounded-full font-medium">화학</span>
+        <span class="px-3 py-1.5 bg-primary-light text-primary text-sm rounded-full font-medium">섬유의복</span>
+        <span class="px-3 py-1.5 bg-primary-light text-primary text-sm rounded-full font-medium">전기전자</span>
+        <span class="px-3 py-1.5 bg-primary-light text-primary text-sm rounded-full font-medium">정보통신</span>
+        <span class="px-3 py-1.5 bg-primary-light text-primary text-sm rounded-full font-medium">식품가공</span>
+        <span class="px-3 py-1.5 bg-primary-light text-primary text-sm rounded-full font-medium">건설</span>
+        <span class="px-3 py-1.5 bg-primary-light text-primary text-sm rounded-full font-medium">디자인·문화콘텐츠</span>
+        <span class="px-3 py-1.5 bg-primary-light text-primary text-sm rounded-full font-medium">이·미용</span>
+        <span class="px-3 py-1.5 bg-primary-light text-primary text-sm rounded-full font-medium">음식서비스</span>
+        <span class="px-3 py-1.5 bg-primary-light text-primary text-sm rounded-full font-medium">공예</span>
+        <span class="px-3 py-1.5 bg-primary-light text-primary text-sm rounded-full font-medium">산업안전</span>
+        <span class="px-3 py-1.5 bg-primary-light text-primary text-sm rounded-full font-medium">품질관리</span>
+      </div>
+    </div>
+    <div class="fade-up bg-white rounded-2xl p-7 border border-gray-200 shadow-sm">
+      <h3 class="text-base font-bold text-navy mb-6 text-center">진행절차</h3>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-3" role="list" aria-label="산업현장교수 진행절차">
+        <div class="relative bg-primary-light rounded-xl p-4 text-center" role="listitem">
+          <div class="w-8 h-8 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center mx-auto mb-2">1</div>
+          <strong class="text-navy text-sm block">지원사업 공고</strong>
+          <p class="text-[11px] text-gray-500 mt-1">마이스터넷</p>
+          <svg class="hidden md:block absolute top-1/2 -right-2.5 w-4 h-4 text-primary -translate-y-1/2 z-10" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>
+        </div>
+        <div class="relative bg-primary-light rounded-xl p-4 text-center" role="listitem">
+          <div class="w-8 h-8 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center mx-auto mb-2">2</div>
+          <strong class="text-navy text-sm block">지원계획 협의</strong>
+          <p class="text-[11px] text-gray-500 mt-1">신청기관 ↔ 현장교수</p>
+          <svg class="hidden md:block absolute top-1/2 -right-2.5 w-4 h-4 text-primary -translate-y-1/2 z-10" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>
+        </div>
+        <div class="relative bg-accent-light rounded-xl p-4 text-center" role="listitem">
+          <div class="w-8 h-8 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center mx-auto mb-2">3</div>
+          <strong class="text-navy text-sm block">신청서 접수</strong>
+          <p class="text-[11px] text-gray-500 mt-1">온라인 → 산업인력공단</p>
+        </div>
+        <div class="relative bg-accent-light rounded-xl p-4 text-center" role="listitem">
+          <div class="w-8 h-8 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center mx-auto mb-2">4</div>
+          <strong class="text-navy text-sm block">결정심사 및 승인</strong>
+          <p class="text-[11px] text-gray-500 mt-1">산업인력공단</p>
+          <svg class="hidden md:block absolute top-1/2 -right-2.5 w-4 h-4 text-accent -translate-y-1/2 z-10" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>
+        </div>
+        <div class="relative bg-primary-light rounded-xl p-4 text-center" role="listitem">
+          <div class="w-8 h-8 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center mx-auto mb-2">5</div>
+          <strong class="text-navy text-sm block">지원 실시</strong>
+          <p class="text-[11px] text-gray-500 mt-1">현장교수 ↔ 지원기관</p>
+          <svg class="hidden md:block absolute top-1/2 -right-2.5 w-4 h-4 text-primary -translate-y-1/2 z-10" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>
+        </div>
+        <div class="relative bg-gradient-to-br from-primary to-accent rounded-xl p-4 text-center text-white" role="listitem">
+          <div class="w-8 h-8 rounded-full bg-white/20 text-white text-xs font-bold flex items-center justify-center mx-auto mb-2">6</div>
+          <strong class="text-sm block">만족도 설문</strong>
+          <p class="text-[11px] text-white/80 mt-1">지원기관 제출</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== CONTACT ======================== -->
+<section id="contact" class="py-20 lg:py-28 bg-navy text-white" aria-labelledby="contact-title">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6">
+    <div class="fade-up text-center mb-16">
+      <h2 id="contact-title" class="font-display text-3xl sm:text-4xl lg:text-5xl text-white mb-4">문의하기</h2>
+      <p class="text-white/80 text-lg">부천·김포·시흥·광명 기업과 함께 합니다</p>
+    </div>
+    <div class="fade-up grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-white/10 rounded-2xl p-7 border border-white/15">
+        <h3 class="text-lg font-bold mb-5">사업별 담당자 연락처</h3>
+        <div class="space-y-0 divide-y divide-white/10 text-sm">
+          <div class="flex justify-between items-center py-3"><span class="text-white/85">사업주 훈련 (자체/위탁)</span><a href="tel:032-719-0834" class="font-bold text-[#5CD9B5] hover:text-white transition-colors">032-719-0834</a></div>
+          <div class="flex justify-between items-center py-3"><span class="text-white/85">체계적 현장훈련 (S-OJT)</span><a href="tel:032-719-0831" class="font-bold text-[#5CD9B5] hover:text-white transition-colors">032-719-0831</a></div>
+          <div class="flex justify-between items-center py-3"><span class="text-white/85">일학습 병행</span><a href="tel:032-719-0832" class="font-bold text-[#5CD9B5] hover:text-white transition-colors">032-719-0832</a></div>
+          <div class="flex justify-between items-center py-3"><span class="text-white/85">인적자원개발 우수기관 인증</span><a href="tel:032-719-0833" class="font-bold text-[#5CD9B5] hover:text-white transition-colors">032-719-0833</a></div>
+          <div class="flex justify-between items-center py-3"><span class="text-white/85">산업현장교수 지원사업</span><a href="tel:032-719-0835" class="font-bold text-[#5CD9B5] hover:text-white transition-colors">032-719-0835</a></div>
+        </div>
+      </div>
+      <div class="bg-white/10 rounded-2xl p-7 border border-white/15">
+        <h3 class="text-lg font-bold mb-5">찾아오시는 길</h3>
+        <div class="space-y-4 text-sm text-white/85">
+          <div><p class="font-semibold text-white">경기도 부천시 원미구 길주로463번길 69</p><p class="text-white/60 mt-0.5">한국산업인력공단 경기서부지사</p></div>
+          <div><p class="font-semibold text-white">대표전화</p><a href="tel:032-719-0800" class="text-[#5CD9B5] font-bold text-lg hover:text-white transition-colors">032-719-0800</a></div>
+          <div><p class="font-semibold text-white">웹사이트</p><a href="https://hrdc.hrdkorea.or.kr/hrdc/gyeonggiw" target="_blank" rel="noopener" class="text-[#5CD9B5] hover:text-white transition-colors break-all">hrdc.hrdkorea.or.kr/hrdc/gyeonggiw</a></div>
+        </div>
+        <div class="mt-5 pt-5 border-t border-white/10">
+          <h4 class="text-sm font-semibold mb-3">주요 사이트</h4>
+          <div class="flex flex-wrap gap-2 text-xs">
+            <a href="https://hrd4u.or.kr" target="_blank" rel="noopener" class="px-3 py-1.5 bg-white/10 rounded-full hover:bg-white/20 transition-colors">hrd4u.or.kr</a>
+            <a href="https://hrdkorea.or.kr" target="_blank" rel="noopener" class="px-3 py-1.5 bg-white/10 rounded-full hover:bg-white/20 transition-colors">hrdkorea.or.kr</a>
+            <a href="https://meister.hrdkorea.or.kr" target="_blank" rel="noopener" class="px-3 py-1.5 bg-white/10 rounded-full hover:bg-white/20 transition-colors">meister.hrdkorea.or.kr</a>
+            <a href="https://work24.go.kr" target="_blank" rel="noopener" class="px-3 py-1.5 bg-white/10 rounded-full hover:bg-white/20 transition-colors">work24.go.kr</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ======================== FOOTER ======================== -->
+<footer class="bg-[#121D33] text-white/60 py-12" role="contentinfo">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="flex flex-col items-center text-center">
+      <img src="https://www.hrdkorea.or.kr/design5/images/logo.svg" alt="" class="h-7 mb-4 brightness-0 invert opacity-50" aria-hidden="true">
+      <p class="font-bold text-white/75 mb-1 text-sm">한국산업인력공단 경기서부지사</p>
+      <p class="text-sm">경기도 부천시 원미구 길주로463번길 69 | 대표전화 032-719-0800</p>
+      <div class="flex items-center gap-3 mt-5" aria-label="SNS 링크">
+        <a href="https://www.facebook.com/hrdkorea2020/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#1877F2] hover:scale-110 transition-all group" aria-label="Facebook">
+          <svg class="w-4.5 h-4.5 text-white/50 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/hrdkorea_official/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-gradient-to-br hover:from-[#f9ce34] hover:via-[#ee2a7b] hover:to-[#6228d7] hover:scale-110 transition-all group" aria-label="Instagram">
+          <svg class="w-4.5 h-4.5 text-white/50 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/user/HRDKorea" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#FF0000] hover:scale-110 transition-all group" aria-label="YouTube">
+          <svg class="w-4.5 h-4.5 text-white/50 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+      </div>
+      <div class="mt-5 pt-5 border-t border-white/10 w-full max-w-md">
+        <p class="text-white/40 text-xs">부천 · 김포 · 시흥 · 광명 기업과 함께 합니다.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Top Button -->
+<button id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed bottom-6 right-6 z-50 w-12 h-12 bg-primary text-white rounded-full shadow-xl flex items-center justify-center hover:bg-primary-dark hover:-translate-y-1 transition-all" aria-label="맨 위로 이동">
+  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7"/></svg>
+</button>
+
+<script>
+// Mobile menu
+const menuBtn = document.getElementById('menuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+menuBtn.addEventListener('click', () => {
+  const isOpen = mobileMenu.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded', isOpen);
+});
+document.querySelectorAll('.mobile-link').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+  });
+});
+
+// Navbar scroll
+const navbar = document.getElementById('navbar');
+const topBtn = document.getElementById('topBtn');
+
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  const logo = document.getElementById('navLogo');
+  const navLinks = navbar.querySelectorAll('.nav-link');
+  const logoText = navbar.querySelector('.nav-logo-text');
+  const logoSub = navbar.querySelector('.nav-logo-sub');
+  const menuIcon = navbar.querySelector('.menu-icon');
+  const navCta = navbar.querySelector('.nav-cta');
+  const mobileLinks = navbar.querySelectorAll('.mobile-link');
+
+  if (y > 80) {
+    navbar.classList.add('bg-white/95', 'backdrop-blur-lg', 'shadow-lg', 'shadow-black/5');
+    logo.classList.remove('brightness-0', 'invert');
+    if (logoText) { logoText.classList.remove('text-white'); logoText.classList.add('text-navy'); }
+    if (logoSub) { logoSub.classList.remove('text-white/80'); logoSub.classList.add('text-gray-500'); }
+    navLinks.forEach(l => { l.classList.remove('text-white/90','hover:text-white'); l.classList.add('text-navy','hover:text-primary'); });
+    if (menuIcon) { menuIcon.classList.remove('text-white'); menuIcon.classList.add('text-navy'); }
+    if (navCta) { navCta.classList.remove('bg-white/20','backdrop-blur-sm','border-white/30','hover:bg-white/30'); navCta.classList.add('bg-primary','border-transparent','hover:bg-primary-dark','shadow-lg','shadow-primary/25'); }
+    mobileLinks.forEach(l => { l.classList.remove('text-white','hover:bg-white/10'); l.classList.add('text-navy','hover:bg-primary-light'); });
+  } else {
+    navbar.classList.remove('bg-white/95', 'backdrop-blur-lg', 'shadow-lg', 'shadow-black/5');
+    logo.classList.add('brightness-0', 'invert');
+    if (logoText) { logoText.classList.remove('text-navy'); logoText.classList.add('text-white'); }
+    if (logoSub) { logoSub.classList.remove('text-gray-500'); logoSub.classList.add('text-white/80'); }
+    navLinks.forEach(l => { l.classList.remove('text-navy','hover:text-primary'); l.classList.add('text-white/90','hover:text-white'); });
+    if (menuIcon) { menuIcon.classList.remove('text-navy'); menuIcon.classList.add('text-white'); }
+    if (navCta) { navCta.classList.remove('bg-primary','border-transparent','hover:bg-primary-dark','shadow-lg','shadow-primary/25'); navCta.classList.add('bg-white/20','backdrop-blur-sm','border-white/30','hover:bg-white/30'); }
+    mobileLinks.forEach(l => { l.classList.remove('text-navy','hover:bg-primary-light'); l.classList.add('text-white','hover:bg-white/10'); });
+  }
+
+  topBtn.classList.toggle('show', y > 600);
+});
+
+// Fade in observer
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// Active nav
+const sections = document.querySelectorAll('section[id]');
+const navLinksAll = document.querySelectorAll('.nav-link');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 100) current = s.id; });
+  navLinksAll.forEach(l => { l.classList.toggle('active', l.getAttribute('href') === `#${current}`); });
+});
+
+// Table scroll hint
+document.querySelectorAll('.table-scroll-wrap').forEach(wrap => {
+  const check = () => wrap.classList.toggle('has-scroll', wrap.scrollWidth > wrap.clientWidth + 4);
+  check();
+  window.addEventListener('resize', check);
+  wrap.addEventListener('scroll', () => wrap.classList.toggle('has-scroll', wrap.scrollLeft < wrap.scrollWidth - wrap.clientWidth - 4));
+});
+</script>
+</body>
+</html>
